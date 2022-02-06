@@ -1,0 +1,114 @@
+@import 'variable';
+
+.header-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: #323264;
+}
+
+.header-container__logo {
+    
+}
+
+.header-container__logo-img {
+
+}
+
+.header-container__contacts {
+    width: 478px;
+    margin-bottom: 18px;
+}
+
+.header-container__lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 25px;
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;  
+
+    &:hover {
+        background: #ffffff33;
+        border-radius: 8px;
+    }
+
+    &:active {
+        background: #F0145A;
+    }
+}
+
+.header-container__address {
+    color: #B3B3BA;
+}
+
+.header-container__tel {
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.header-container__social-link {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-image: url("../images/Facebook-Header.svg");
+
+    &:hover {
+        background-image: url("../images/Facebook_icon_red.svg");
+    }
+}
+
+.header-container__sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-container__nav {
+    width: 416px;
+}
+
+.header-container__nav-list {
+    height: 20px;
+}
+
+.header-container__nav-item {
+    position: relative;
+    font-family: "Montserrat-Bold";
+    font-size: 16px;
+    line-height: 20px;
+
+    & a {
+        color: #FFFFFF;
+        
+        &:active {
+            color: #F0145A;    
+        }
+    }
+
+    &::after {
+        content: "";
+        display: none;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: #FFFFFF;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+    }
+
+    &:hover::after {
+        display: block;
+    }
+
+    &:active::after {
+        background-color: #F0145A;;
+    }
+}
+
+

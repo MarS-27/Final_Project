@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+.fix-size-container {
+  max-width: 1320px;
+  min-width: 375px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container {
+  font-family: "Montserrat-Regular";
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background: #323264;
+}
+
+.header-container__contacts {
+  width: 478px;
+  margin-bottom: 18px;
+}
+
+.header-container__lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 25px;
+  font-family: "Montserrat-Bold";
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+.header-container__lang:hover {
+  background: #ffffff33;
+  border-radius: 8px;
+}
+.header-container__lang:active {
+  background: #F0145A;
+}
+
+.header-container__address {
+  color: #B3B3BA;
+}
+
+.header-container__tel {
+  font-family: "Montserrat-Bold";
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.header-container__social-link {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url("../images/Facebook-Header.svg");
+}
+.header-container__social-link:hover {
+  background-image: url("../images/Facebook_icon_red.svg");
+}
+
+.header-container__sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-container__nav {
+  width: 416px;
+}
+
+.header-container__nav-list {
+  height: 20px;
+}
+
+.header-container__nav-item {
+  position: relative;
+  font-family: "Montserrat-Bold";
+  font-size: 16px;
+  line-height: 20px;
+}
+.header-container__nav-item a {
+  color: #FFFFFF;
+}
+.header-container__nav-item a:active {
+  color: #F0145A;
+}
+.header-container__nav-item::after {
+  content: "";
+  display: none;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+.header-container__nav-item:hover::after {
+  display: block;
+}
+.header-container__nav-item:active::after {
+  background-color: #F0145A;
+}
+
+/*# sourceMappingURL=homepage.css.map */

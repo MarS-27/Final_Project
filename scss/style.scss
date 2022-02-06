@@ -1,0 +1,39 @@
+@import 'variable';
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.fix-size-container {
+    max-width: 1320px;
+    min-width: 375px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.container {    
+    font-family: "Montserrat-Regular";
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
