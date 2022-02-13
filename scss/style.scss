@@ -1,5 +1,3 @@
-@import 'variable';
-
 @font-face {
     font-family: "Montserrat-Regular";
     src: url(../fonts/Montserrat-Regular.ttf);
@@ -17,15 +15,15 @@
 }
 
 .fix-size-container {
-    max-width: 1320px;
+    max-width: 1920px;
     min-width: 375px;
-    padding: 0 10px;
     margin: 0 auto;
+    padding: 0 60px;
 }
 
 .container {    
     font-family: "Montserrat-Regular";
-    color: #FFFFFF;
+    color: $white-text;
 }
 
 a {
@@ -36,4 +34,34 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.background-gradient {
+    background: $gradient-supersoft;
+    border-radius: 0px 0px 12px 12px;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+@mixin white-bold-text {
+    font-family: "Montserrat-Bold";
+    color: $white-text;
+}
+
+
+@media (min-width: 1920px) {
+    .fix-size-container {
+        padding: 0 160px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .fix-size-container {
+        padding: 0 30px;
+    }
 }

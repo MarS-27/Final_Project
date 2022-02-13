@@ -1,0 +1,47 @@
+.container__close-btn{
+    display: none;
+}
+
+.btn-scroll__img-hover {
+    display: none;
+}
+
+.btn-scroll {
+    @include flex-center;
+    margin: 0 auto 30px auto;
+    width: 42px;
+    height: 42px;
+    background: $main-bg;
+    border-radius: 50% 50%;
+    border: 2px solid $white-bg;
+
+    &:hover {
+        border-color: $accent-color;
+    }
+
+    &:hover .btn-scroll__img {
+        display: none;
+    }
+
+    &:hover .btn-scroll__img-hover {
+        @include flex-center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .container__close-btn {
+        @include flex-center;
+        margin: 10px 10px 0 auto;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        border: none;
+        background: $white-bg;
+
+        &:active {
+            background: #E6E6F0;
+        }
+    } 
+}
