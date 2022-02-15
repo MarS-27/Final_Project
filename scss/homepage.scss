@@ -2,6 +2,7 @@
 @import 'style';
 @import 'buttons';
 @import 'header';
+@import 'cards';
 
 .background-symbol-h {
     background-image: url("..//images/h_symbol.svg");
@@ -37,10 +38,17 @@
     height: 305px;
 
     & .info-container__link {
-        font-size: 38px;
-        line-height: 46px;
-        font-family: "Montserrat-Bold";
-        color: #B3B3BA;
+        @include title-bold-text;
+        color: $grey-text;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    & .info-container__link_active {
+        background: $text-red-reversed;
+        @include gradient-text;
     }
 }
 
@@ -109,6 +117,10 @@
 }
 
 @media (max-width: 1024px) {
+    .container { 
+        overflow-x: hidden;
+    }
+
     .background-symbol-h {
         background-size: 890px 1024px;
     }
@@ -170,7 +182,8 @@
     }
 
     .info-container__list {
-        // width: 1000px;
+        width: 1000px;
+        margin-bottom: 30px;
 
         & .info-container__link {
             font-size: 30px;
@@ -178,14 +191,18 @@
         }
     }
 
+    .info-container__line {
+        margin-bottom: 30px;
+    }
+
     .info-container__item-title {
-        width: 315px;
+        width: 100%;
         font-size: 20px;
         line-height: 24px;
     }
     
     .info-container__item-text {
-        width: 315px;
+        width: 100%;
         font-size: 19px;
         line-height: 30px;
     }

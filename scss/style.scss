@@ -21,7 +21,8 @@
     padding: 0 60px;
 }
 
-.container {    
+.container {  
+    background: $white-bg;  
     font-family: "Montserrat-Regular";
     color: $white-text;
 }
@@ -39,6 +40,8 @@ a {
 .background-gradient {
     background: $gradient-supersoft;
     border-radius: 0px 0px 12px 12px;
+    box-shadow: 0 40px 0 -30px #CACADB,
+                0 80px 0 -60px #E7E7F2;    
 }
 
 @mixin flex-center {
@@ -50,6 +53,18 @@ a {
 @mixin white-bold-text {
     font-family: "Montserrat-Bold";
     color: $white-text;
+}
+
+@mixin title-bold-text {
+    font-size: 38px;
+    line-height: 46px;
+    font-family: "Montserrat-Bold";
+}
+
+@mixin gradient-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 

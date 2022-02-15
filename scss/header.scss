@@ -42,8 +42,13 @@
     }
 }
 
+.header-container__lang_active {
+    background: $accent-color;
+    border-radius: 8px;
+}
+
 .header-container__address {
-    color: #B3B3BA;
+    color: $grey-text;
 }
 
 .header-container__tel {
