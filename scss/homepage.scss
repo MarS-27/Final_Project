@@ -3,6 +3,7 @@
 @import 'buttons';
 @import 'header';
 @import 'cards';
+@import 'footer';
 
 .background-symbol-h {
     background-image: url("..//images/h_symbol.svg");
@@ -33,9 +34,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px 60px 10px 0;
-    width: 435px;
+    padding: 10px 0;
+    min-width: 375px;
     height: 305px;
+    margin-right: 60px;
 
     & .info-container__link {
         @include title-bold-text;
@@ -55,7 +57,7 @@
 .info-container__line {
     margin: 0;
     border: none;
-    width: 4px;
+    min-width: 4px;
     height: 305px;
     background: #ffffff4d;
     transform: rotate(180deg);

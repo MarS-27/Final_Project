@@ -30,9 +30,7 @@
     &:hover::after {
         border-top: 2px solid $accent-color;
         border-left: 2px solid  $accent-color;
-    }
-
-    
+    } 
 }
 
 .card-container__title {
@@ -44,8 +42,8 @@
 
 .card-container__list {
     display: grid;
-    grid-template-rows: repeat(2, 321px);
-    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     justify-content: center;
 }
@@ -103,7 +101,7 @@
 }
 
 .card-container__title-team {
-    width: 860px;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -120,40 +118,199 @@
     line-height: 22px;
 }
 
-@media (min-width: 1920px) {
-    .card-container__list {
-        grid-template-rows: repeat(2, 295px);
-        grid-template-columns: repeat(3, 493px);
+.card-container__clients-wrap {
+    & .fix-size-container {
+        padding: 0;
     }
+
+    & .card-container {
+        padding-bottom: 0;
+    }
+}
+
+.card-container__clients {
+    padding-top: 60px;
+}
+
+.card-container__clients-title {
+    font-family: "Montserrat-Bold";
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+}
+
+.card-container__clients-list {
+    display: grid;
+    grid-template-rows: repeat(3, 120px);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-container__clients-item {
+    @include flex-center;
+}
+
+.clients-item_hilel {
+    background: #1C4280;
+}
+
+.clients-item_wannabiz {
+    background: #143646;
+}
+
+.clients-item_tapgerine {
+    background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+}
+
+.clients-item_3dlook {
+    background: #9E4DC3;
+}
+
+.clients-item_orangear {
+    background: #FD9339;
+}
+
+.clients-item_adtelligent {
+    background: #E2E2E4;
+}
+
+.clients-item_clikky {
+    background: #C71C36;
+}
+
+.clients-item_ecoleasing {
+    background: #DCF3F9;
+}
+
+.clients-item_infratek {
+    background: #EAEAEA;
+}
+
+.clients-item_citypark {
+    background: #282240;
+}
+
+.clients-item_artprint {
+    background: #1D4568;
+}
+
+.clients-item_ultimate {
+    background: #000000;
+}
+
+.container__publications-background {
+    background: #F5F5FA;
+}
+
+.card-container__publications {
+    padding: 30px 0;
+
+    & .card-container__title {
+        margin-bottom: 30px;
+    }
+}
+
+.card-container__publications-list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    & .card-container__item {
+        background: #ffffff;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+.card-container__publications-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-container__publications-info {
+    padding: 30px;
+}
+
+.card-container__publications-title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.card-container__publications-date {
+    font-family: "Montserrat-Bold";
+    margin-bottom: 15px;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $grey-text;
+}
+
+.card-container__publications-line {
+    border: none;
+    width: 100%;
+    height: 4px;
+    background: #E6E6F0;
+}
+
+.card-container__publications-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+}
+
+@media (min-width: 1920px) {
     
     .card-container__team-foto {
         height: 300px;
     }
+    
+    .card-container__clients-wrap {
+        & .fix-size-container {
+            padding: 0 100px;
+            }
+    }
 
-    .card-container__title-team {
-        width: 1140px;
+    .card-container__clients {
+        margin-bottom: 60px;
+    }
+
+    .clients-item_hilel {
+        border-radius: 12px 0 0 0;
+    }
+    
+    .clients-item_3dlook { 
+        border-radius: 0 12px 0 0;
+    }
+
+    .clients-item_infratek {
+        border-radius: 0 0 0 12px;
+    }
+
+    .clients-item_ultimate {
+        border-radius: 0 0 12px 0;
     }
 }
 
 @media (max-width: 1440px) {
-    .card-container__list {
-        grid-template-rows: repeat(2, 399px);
-        grid-template-columns: repeat(3, 261px);
-    }
 
     .card-container__team-foto {
         height: 528px;
-    }
-
-    .card-container__title-team {
-        width: 445px;
     }
 }
 
 @media (max-width: 1024px) {
     .card-container__list {
-        grid-template-rows: repeat(3, 373px);
-        grid-template-columns: repeat(2, 294px);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .card-container__team {
@@ -169,8 +326,18 @@
         border-radius: 12px 12px 0 0 ;
     }
 
-    .card-container__title-team {
-        width: 588px;
+    .card-container__clients-list {
+        grid-template-rows: repeat(4, 120px);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-container__publications-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-container__publications_long {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 
@@ -188,11 +355,32 @@
     }
 
     .card-container__team,
-    .card-container__team-foto,
-    .card-container__title-team {
+    .card-container__team-foto {
         width: 100%;
     }
 
+    .card-container__clients-list {
+        grid-template-rows: repeat(6, 120px);
+        grid-template-columns: 1fr;
+    }
 
+    .clients-item_clikky,
+    .clients-item_ecoleasing,
+    .clients-item_infratek,
+    .clients-item_citypark,
+    .clients-item_artprint,
+    .clients-item_ultimate {
+        display: none;
+    }
 
+    .card-container__publications-list {
+        display: block;
+        & .card-container__item {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

@@ -1,0 +1,167 @@
+.footer-container {
+    padding-bottom: 30px;
+    background: #F5F5FA;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-container__line {
+    margin: 0 0 30px 0;
+    width: 100%;
+    height: 2px;
+    background: #E6E6F0;
+    border: none;
+}
+
+.footer-container__contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container__address {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+.footer-container__address-text {
+    position: relative;
+    color: #323264;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #B3B3BA;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15px;
+    }
+}
+
+.footer-container__map-link {
+    font-family: "Montserrat-Bold";
+    color: $blue-text;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.footer-container__media {
+    width: 380px;
+}
+
+.footer-container__social-link {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-image: url("../images/Facebook_footer.svg");
+
+    &:hover {
+        background-image: url("../images/Facebook_footer_red.svg");
+    }
+}
+
+.footer-container__tel {
+    position: relative;
+    font-family: "Montserrat-Bold";
+    color: #46466E;
+
+    &:hover {
+        color: $accent-color;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #B3B3BA;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -15px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #B3B3BA;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+    }
+}
+
+.show-popup {
+    border: none;
+    background: transparent;
+    font-family: "Montserrat-Bold";
+    color: $blue-text;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+.footer-container__rights {
+    align-self: flex-start;
+}
+
+.footer-container__rights-text {
+    color: #B3B3BA;;
+}
+
+@media (max-width: 1024px) {
+    .footer-container__contacts {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .footer-container__contacts-list {
+        margin-bottom: 30px;
+    }
+
+    .footer-container__rights {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container__address,
+    .footer-container__media {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-container__social-link {
+        margin-bottom: 10px;
+    }
+
+    .footer-container__address-text {
+        margin-bottom: 10px;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .footer-container__tel {
+        margin-bottom: 10px;
+        
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+}

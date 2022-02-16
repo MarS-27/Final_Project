@@ -8,6 +8,7 @@
 
 .btn-scroll {
     @include flex-center;
+    position: relative;
     margin: 0 auto 30px auto;
     width: 42px;
     height: 42px;
@@ -15,17 +16,47 @@
     border-radius: 50% 50%;
     border: 2px solid $white-bg;
 
+    &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top:  2px solid #FFFFFF;
+        border-right:  2px solid #FFFFFF;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%) rotate(135deg);
+    }
+
     &:hover {
         border-color: $accent-color;
     }
 
-    &:hover .btn-scroll__img {
-        display: none;
+    &:hover::after {
+        border-top: 2px solid $accent-color;
+        border-right: 2px solid $accent-color;
     }
+}
 
-    &:hover .btn-scroll__img-hover {
-        @include flex-center;
+.button-dot {
+    margin: 0 auto;
+    width: 78px;
+}
+
+.button-dot__item {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background-color: #24A3FF;
+    opacity: 0.2;
+
+    &:hover {
+        opacity: 0.6;
     }
+}
+
+.button-dot__item_active {
+    opacity: 1;
 }
 
 
