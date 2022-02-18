@@ -28,20 +28,14 @@
     color: #323264;
 
     &::after {
-        content: "";
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
+        @include dot;
         background: #B3B3BA;
-        top: 50%;
-        transform: translateY(-50%);
         right: -15px;
     }
 }
 
 .footer-container__map-link {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     color: $blue-text;
     font-size: 12px;
     line-height: 15px;
@@ -70,7 +64,7 @@
 
 .footer-container__tel {
     position: relative;
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     color: #46466E;
 
     &:hover {
@@ -78,26 +72,14 @@
     }
 
     &::before {
-        content: "";
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
+        @include dot;
         background: #B3B3BA;
-        top: 50%;
-        transform: translateY(-50%);
         left: -15px;
     }
 
     &::after {
-        content: "";
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
+        @include dot;
         background: #B3B3BA;
-        top: 50%;
-        transform: translateY(-50%);
         right: -20px;
     }
 }
@@ -105,7 +87,7 @@
 .show-popup {
     border: none;
     background: transparent;
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     color: $blue-text;
 
     &:hover {
@@ -121,11 +103,121 @@
     color: #B3B3BA;;
 }
 
+// Popup elements style
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(50, 50, 100, 0.7);
+    display: none;
+}
+
+.popup.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-card {
+    position: relative;
+    width: 650px;
+    background: #F5F5FA;
+    box-shadow: 0px 15px 80px #28285680;
+    border-radius: 12px;
+    padding: 30px;
+
+    & .hide {
+        @include flex-center;
+        background: #F5F5FA;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+
+        &:hover {
+            background: #E6E6F0;
+        }
+    }
+}
+
+.popup-card__title {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.popup__input,
+.popup__textarea {
+    width: 100%;
+    padding: 15px;    
+    background: $white-bg;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    font-family: "Montserrat-Regular";
+    font-size: 16px;
+
+    &::placeholder {
+        font-family: "Montserrat-Regular";
+        font-size: 16px;
+        line-height: 26px;
+        color: #B3B3BA;
+    }
+
+    &:focus {
+        border: 1px solid #24A3FF;;
+    }
+}
+
+.popup__input {
+   height: 56px; 
+}
+
+.popup__textarea {
+    resize: none;
+    height: 130px;
+}
+
+.popup__text {
+    margin-bottom: 15px;
+    font-family: $bold-font;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #B3B3BA;
+}
+
+.popup-card__submit {
+    height: 56px;
+    width: 100%;
+    border: none;
+    background: #24A3FF;
+    box-shadow: 0px 0px 20px #24a3ff80;
+    border-radius: 12px;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: $white-text;
+    font-family: $bold-font;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:hover {
+        background: #0085FF;
+    }
+
+    &:active {
+        background: #006CCF;
+    }
+}
+
 @media (max-width: 1024px) {
     .footer-container__contacts {
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center; 
     }
 
     .footer-container__contacts-list {
@@ -163,5 +255,11 @@
         &::before {
             display: none;
         }
+    }
+
+    .popup-card {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
     }
 }

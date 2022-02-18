@@ -1,0 +1,77 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'cards';
+@import 'footer';
+
+.header-container {
+    margin-bottom: 60px;
+}
+
+.header-container__logo {
+    & a {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;  
+    }
+}
+
+.header-container__logo-text {
+    font-size: 36px;
+    line-height: 44px;
+    color: $white-text;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        transform: skewX(-20deg);
+        height: 47px;
+        width: 6px;
+        background: $accent-color;
+    }
+}
+
+.header-container__nav-item_active {
+    & a {
+    color: $accent-color;
+    }
+
+    &::after {
+        display: block;
+        background: $accent-color;
+    }
+}
+
+.footer-container {
+    padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .header-container__logo {
+        & a {
+            width: 168px;
+        }
+    }
+
+    .header-container__logo-text {
+        font-size: 20px;
+        line-height: 24px;
+    
+        &::before {
+            content: "";
+            left: -10px;
+            height: 26px;
+            width: 4px;
+        }
+    }
+
+    .header-container__nav-item_active {
+
+        &::after {
+            display: none;
+        }
+    }
+}

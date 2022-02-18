@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     src: url(../fonts/Montserrat-Bold.ttf);
     font-weight: 700;
 }
@@ -31,6 +31,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -38,10 +42,33 @@ a {
 }
 
 .background-gradient {
+    position: relative;
     background: $gradient-supersoft;
     border-radius: 0px 0px 12px 12px;
-    box-shadow: 0 40px 0 -30px #CACADB,
-                0 80px 0 -60px #E7E7F2;    
+      
+        &::after {
+            content: "";
+            position: absolute;
+            height: 10px;
+            background: #cacadb;
+            top: 100%;
+            bottom: 0;
+            left: 20px;
+            right: 20px;
+            border-radius: 0 0 12px 12px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            background: #e7e7f2;
+            top: 100%;
+            bottom: 0;
+            left: 40px;
+            right: 40px;
+            border-radius: 0 0 12px 12px;
+        }
 }
 
 @mixin flex-center {
@@ -50,15 +77,26 @@ a {
     align-items: center;
 } 
 
+@mixin dot {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #E6E6F0;;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
 @mixin white-bold-text {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     color: $white-text;
 }
 
 @mixin title-bold-text {
     font-size: 38px;
     line-height: 46px;
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
 }
 
 @mixin gradient-text {
@@ -66,7 +104,6 @@ a {
     -webkit-background-clip: text;
     color: transparent;
 }
-
 
 @media (min-width: 1920px) {
     .fix-size-container {

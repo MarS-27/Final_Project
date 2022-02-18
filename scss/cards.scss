@@ -5,7 +5,7 @@
 .container__link {
     color: $blue-text;
     position: relative;
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 10px;
@@ -62,7 +62,7 @@
 }
 
 .card-container__item-title {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     margin-bottom: 15px;
     font-size: 22px;
     line-height: 27px;
@@ -133,7 +133,7 @@
 }
 
 .card-container__clients-title {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
@@ -245,7 +245,7 @@
 }
 
 .card-container__publications-date {
-    font-family: "Montserrat-Bold";
+    font-family: $bold-font;
     margin-bottom: 15px;
     font-size: 12px;
     line-height: 15px;

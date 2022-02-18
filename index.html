@@ -15,7 +15,7 @@
                     <header class="header-container">
                         <div class="fix-size-container header-container__inner">
                             <div class="header-container__logo">
-                                <a href="">
+                                <a href="index.html">
                                     <img class="header-container__logo-img" src="images/Logo.svg" alt="hlegal">
                                 </a>
                             </div>
@@ -39,7 +39,7 @@
                                         <a href="">about us</a>
                                     </li>
                                     <li class="header-container__nav-item">
-                                        <a href="">services</a>
+                                        <a href="pages/services.html">services</a>
                                     </li>
                                     <li class="header-container__nav-item">
                                         <a href="">team</a>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="card-container">
-                            <a href="" class="container__link">Services</a>
+                            <a href="pages/services.html" class="container__link">Services</a>
                             <h2 class="card-container__title">
                                 What can we do better than others?
                             </h2>
@@ -316,7 +316,7 @@
                             <div class="footer-container__media flex-container">
                                 <a class="footer-container__social-link" href="https://uk-ua.facebook.com/" target="blank"></a>
                                 <a class="footer-container__tel" href="tel:0800211927">0800 211 927</a>
-                                <button class="show-popup">contact@forstudy.space</button>
+                                <button class="show-popup" id="showPop">contact@forstudy.space</button>
                             </div>
                         </div>    
                         <div class="footer-container__rights">
@@ -324,7 +324,45 @@
                         </div>
                     </div>
                 </div>
-            </footer>  
-        </div>     
+            </footer>
+            
+            <!-- Popup elements -->
+            <div class="popup" id="popUp">
+                <div class="popup-card">
+                    <h2 class="popup-card__title card-container__title">
+                        We would like to help you
+                    </h2>
+                    <button class="container__close-btn hide" id="hide">
+                        <img src="images/btn_close.svg" alt="">
+                    </button>
+                    <form method="get" action="">
+                        <input class="popup__input" type="text" name="name" placeholder="Name">
+                        <textarea class="popup__textarea" name="message" placeholder="Message"></textarea>
+                        <p class="popup__text">How to answer you?</p>
+                        <input class="popup__input" type="tel" name="phone number" placeholder="Phone number">
+                        <input class="popup__input" type="email" name="email" placeholder="Email">
+                        <input class="popup-card__submit" type="submit" value="Send message">
+                    </form>
+                </div>    
+            </div>
+        </div>
+        
+        <script>
+            const popUp = document.getElementById("showPop");
+            const popUpTwo = document.getElementById("popUp");
+      
+            popUp.addEventListener("click", () => {
+              popUpTwo.classList.add("show");
+            });
+      
+            const hidePop = document.getElementById("hide");
+      
+            hidePop.addEventListener("click", function () {
+              popUpTwo.classList.remove("show");
+            });
+              function hidePopUp() {
+                popUpTwo.classList.remove("show");
+              }
+        </script>
     </body>
 </html>
