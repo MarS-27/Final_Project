@@ -1,0 +1,90 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'cards';
+@import 'footer';
+
+.entry-page-container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 80px;
+}
+
+.card-container__item-logo {
+    margin: 0 auto 30px auto;
+}
+
+.entry-page-container__title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.entry-page-container__text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+.entry-page-container__line {
+    height: 4px;
+    margin-bottom: 30px;
+    border: none;
+    background: #ffffff80;
+}
+
+.entry-page-container__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    padding-bottom: 45px;
+}
+
+.entry-page-container__sub-title {
+    margin-bottom: 30px;
+    @include white-bold-text;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.entry-page-container__list-block {
+    padding-left: 0;
+}
+
+.entry-page-container__list-item {  
+    list-style-type: disc;
+    list-style-position: inside;
+    color: $accent-color;
+    margin-bottom: 15px;
+
+    & span {
+        color: $white-text;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.card-container__publications {
+    padding: 30px 0 0 0;
+}
+
+@media (min-width: 1920px) {
+    .entry-page-container__list-item { 
+        
+    }
+}
+
+@media (max-width: 1440px) {
+    .entry-page-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .entry-page-container__list {
+        display: block;
+    }
+}
