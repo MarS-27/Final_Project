@@ -1,0 +1,61 @@
+.header-container__logo-text {
+    color: #323264;
+}
+
+.header-container__lang {
+    color: $grey-text;
+
+    &:hover {
+        background: #F5F5FA;
+    }
+
+    &:active {
+        color: $white-text;
+        background: $accent-color;
+    }
+}
+
+.header-container__lang_active {
+    color: $white-text;
+}
+
+.header-container__tel {
+    color: $grey-text;
+}
+
+.header-container__social-link {
+    background-image: url("../images/Facebook_header_grey.svg");
+}
+
+.header-container__nav-item {
+    
+    & a {
+        color: $blue-text;
+        
+        &:active, 
+        &:hover {
+            color: $accent-color;    
+        }
+    }
+
+    &::after {
+        background-color: $accent-color;
+    }
+}
+
+.header-container__nav-item_active {
+
+    & a {
+    color: $accent-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container__contacts {
+        background: #f5f5fa; 
+    }
+
+    .header-container__sidebar-btn {
+        background-color: $white-bg;
+    }
+}

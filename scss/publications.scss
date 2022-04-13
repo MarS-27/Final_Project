@@ -1,0 +1,71 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'white_header';
+@import 'cards';
+@import 'footer';
+
+.header-container__logo {
+    & a {
+        width: 380px; 
+    }
+}
+
+.card-container__publications-switch {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    padding: 2px;
+    width: 233px;
+    height: 42px;
+    background: #E6E6F0;
+    border-radius: 12px;
+    margin: 0 auto 30px auto;
+}
+
+.switch-element_active {
+    width: 105px;
+    background: $white-bg;
+}
+
+.switch-element {
+    width: 122px;;
+    background: #E6E6F0;
+}
+
+.switch-element,
+.switch-element_active {
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+        background: #F5F5FA;
+    }
+}
+
+.switch-element__text {
+    text-align: center;
+    font-family: $bold-font;
+    color: #323264;
+    font-size: 16px;
+    line-height: 20px;   
+}
+
+.entry-page-container__button {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        margin-bottom: 0;
+    }
+
+    .header-container__logo {
+        & a {
+            width: 210px;
+        }
+    }
+}

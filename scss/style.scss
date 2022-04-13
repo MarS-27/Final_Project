@@ -46,29 +46,35 @@ button {
     background: $gradient-supersoft;
     border-radius: 0px 0px 12px 12px;
       
-        &::after {
-            content: "";
-            position: absolute;
-            height: 10px;
-            background: #cacadb;
-            top: 100%;
-            bottom: 0;
-            left: 20px;
-            right: 20px;
-            border-radius: 0 0 12px 12px;
-        }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        background: #cacadb;
+        top: 100%;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        border-radius: 0 0 12px 12px;
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            height: 20px;
-            background: #e7e7f2;
-            top: 100%;
-            bottom: 0;
-            left: 40px;
-            right: 40px;
-            border-radius: 0 0 12px 12px;
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        background: #e7e7f2;
+        top: 100%;
+        bottom: 0;
+        left: 40px;
+        right: 40px;
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+.entry-page-container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 80px;
 }
 
 @mixin flex-center {
@@ -108,6 +114,13 @@ button {
 @media (min-width: 1920px) {
     .fix-size-container {
         padding: 0 160px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .entry-page-container {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
