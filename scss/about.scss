@@ -1,0 +1,252 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'white_header';
+@import 'cards';
+@import 'footer';
+
+.entry-page-container {
+    margin-bottom: 60px;
+}
+
+.header-container__logo {
+    & a {
+        width: 320px; 
+    }
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 395px;
+}
+
+.about-container__info {
+    padding-right: 30px;
+}
+
+.about-container__info-title {
+    background: $text-red-gradient;
+    @include title-bold-text;
+    @include gradient-text;
+}
+
+.about-container__info-text {
+    margin-top: 30px;
+    font-size: 19px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.about-container__stat {
+    height: 322px;
+    padding-left: 30px;
+    border-left: 4px solid #E6E6F0;
+}
+
+.about-container__stat-inner {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    grid-template-rows: 44px 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "stat-img stat-number"
+    "stat-text stat-text";
+    margin-bottom: 40px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.about-container__stat-img {
+    grid-area: stat-img;
+    align-self: center;
+    width: 32px;
+    height: 32px;
+}
+
+.about-container__stat-number {
+    grid-area: stat-number;
+    background: $text-red-gradient;
+    @include gradient-text;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: $bold-font;
+}
+
+.about-container__stat-text {
+    grid-area: stat-text;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323264;
+}
+
+.team-container__background-foto {
+    width: 100%;
+    height: 440px;
+    padding-top: 163px;
+    background-image: url("../images/Team.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 30px;
+}
+
+.team-container__title {
+    font-family: $bold-font;
+    font-size: 96px;
+    line-height: 117px;
+    text-align: center;
+    letter-spacing: 63px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(41, 41, 87, 0.8);
+}
+
+.about-container__info_without-stat {
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+.container__achievements-background {
+    background: #F5F5FA;
+}
+
+.achievements-container {
+    padding-top: 30px;
+}
+
+.achievements-container__title {
+    margin-bottom: 30px;
+    font-family: $bold-font;
+    color: #323264;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.achievements-container__block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.achievements-container__item {
+    height: 110px;
+    @include flex-center;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.button-dot__item_max-width-768px {
+    display: none;
+}
+
+@media (min-width: 1920px) {
+    .team-container__background-foto {
+        height: 584px;
+        padding-top: 236px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .team-container__background-foto {
+        height: 312px;
+        padding-top: 103px;
+    }
+
+    .team-container__title {
+        font-size: 86px;
+        line-height: 105px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        display: block;
+    }
+
+    .about-container__info {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-container__stat {
+        width: 100%;
+        height: 302px;
+    }
+
+    .team-container__background-foto {
+        height: 234px;
+        padding-top: 90px;
+    }
+
+    .team-container__title {
+        font-size: 46px;
+        line-height: 56px;
+    }
+
+    .about-container__info_without-stat {
+        padding-left: 0;
+    }
+
+    .achievements-container__item {
+        height: 90px;
+    }
+
+    .achievements-container__img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        margin-bottom: 30px;
+    }
+
+    .header-container__logo {
+        & a {
+            width: 177px; 
+        }
+    }
+
+    .about-container__info-title {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .about-container__stat {
+        height: 322px;
+    }
+
+    .team-container__background-foto {
+        height: 114px;
+        padding-top: 35px;
+    }
+
+    .team-container__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 13px;
+    }
+
+    .achievements-container__block {
+        display: block;
+    }
+
+    .achievements-container__item_display-none {
+        display: none;
+    }
+
+    .button-dot__item_max-width-768px {
+        display: block;
+    }
+
+    .button-dot {
+        width: 166px;
+    }
+}

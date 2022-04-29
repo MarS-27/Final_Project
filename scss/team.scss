@@ -1,0 +1,133 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'white_header';
+@import 'cards';
+@import 'footer';
+
+.header-container__logo {
+    & a {
+        width: 254px; 
+    }
+}
+
+.team-page-container {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 60px;
+}
+
+.card-container__title-team {
+    margin-bottom: 0;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.team-container__item-foto {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.team-container__item-block {
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    grid-template-rows: 26px 22px;
+    grid-template-areas: 
+    "item-name item-link"
+    "item-post item-link";
+
+    &:hover .team-container__item-name {
+        color: $accent-color;
+    }
+
+    &:hover .team-container__item-link {
+        background: #EDEDF7;
+
+        &::after {
+            border-top: 2px solid $accent-color;
+            border-right: 2px solid $accent-color;
+        }
+    }
+}
+
+.team-container__item-name {
+    color: #323264;
+    grid-area: item-name;
+}
+
+.team-container__item-post {
+    grid-area: item-post;
+}
+
+.team-container__item-link {
+    grid-area: item-link;
+    align-self: flex-start;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: #F5F5FA;
+    border-radius: 50%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-top: 2px solid #24A3FF;
+        border-right: 2px solid #24A3FF;
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        left: 30%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .team-page-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        margin-bottom: 30px;
+    }
+
+    .header-container__logo {
+        & a {
+            width: 142px; 
+        }
+    }
+
+    .team-page-container {
+        margin-bottom: 30px;
+    }
+
+    .team-container {
+        display: block;
+    }
+
+    .team-container__item {
+        margin-bottom: 30px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
