@@ -1,0 +1,118 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'white_header';
+@import 'cards';
+@import 'footer';
+@import 'team';
+
+.header-container__logo {
+    & a {
+        width: 300px; 
+    }
+}
+
+.entry-page-container {
+    margin-bottom: 60px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.contact-container__info {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.contact-container__address {
+    color: #323264;
+    margin-bottom: 30px;
+
+    &::after {
+        display: none;
+    }
+}
+
+.contact-container__line {
+    height: 4px;
+    border: none;
+    background: #E6E6F0;
+    margin-bottom: 30px;
+}
+
+.contact-container__tel {
+    color: #46466E;
+    margin-bottom: 15px;
+}
+
+.contact-container__email {
+    color: #24A3FF;
+    margin-bottom: 30px;
+}
+
+.contact-container__social {
+    width: 155px;
+
+    &:hover .contact-container__social-sub-text {
+        color: $accent-color;
+    }
+
+    &:hover .footer-container__social-link {
+        background-image: url("../images/Facebook_footer_red.svg");
+    }
+}
+
+.contact-container__social-sub-text {
+    font-family: $bold-font;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24A3FF;
+}
+
+.contact-container__form-card {
+    width: 100%;
+    box-shadow: none;
+}
+
+.card-container__title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+@media (max-width: 1024px) {
+    .contact-container {
+        display: block;
+    }
+
+    .contact-container__info {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container__logo {
+        & a {
+            width: 166px; 
+        }
+    }
+
+    .entry-page-container {
+        margin-bottom: 30px;
+    }
+
+    .contact-container__info {
+        margin-bottom: 30px;
+    }
+
+    .contact-container__form-card {
+        height: auto;
+    }
+}

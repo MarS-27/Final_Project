@@ -1,0 +1,149 @@
+@import 'variable';
+@import 'style';
+@import 'buttons';
+@import 'header';
+@import 'services';
+@import 'white_header';
+@import 'cards';
+@import 'footer';
+@import 'team';
+
+.entry-page-container {
+    margin-bottom: 60px;
+}
+
+.person-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 84px 1fr;
+    gap: 30px 60px;
+    grid-template-areas: 
+        "person-foto person-name-contact"
+        "person-foto info-block";
+}
+
+.person-container__foto {
+    grid-area: person-foto;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.person-container__info {
+    grid-area: person-name-contact;
+}
+
+.person-container__info-name {
+    margin-bottom: 15px;
+}
+
+.person-container__info-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 585px;
+}
+
+.person-container__info-block {
+    grid-area: info-block;
+}
+
+.person-container__info-mail,
+.person-container__info-linkedin {
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    color: $blue-text;
+
+    &::before {
+        @include dot;
+        left: -17px;
+    }
+}
+
+.card-container__publications-line {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.person-container__info-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:first-of-type {
+        margin-top: 30px;
+    }
+}
+
+.person-container__info-text_bold {
+    margin-bottom: 15px;
+    font-family: $bold-font;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+}
+
+@media (max-width: 1440px) {
+    .person-container {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 143px 1fr;
+    }
+
+    .person-container__foto {
+        height: 375px;
+    }
+
+    .person-container__info-contact {
+        flex-direction: column;
+        width: 100%;
+    } 
+
+    .person-container__info-mail,
+    .person-container__info-linkedin {
+        margin-top: 10px;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .person-container {
+        grid-template-rows: 375px 1fr;
+        gap: 30px;
+        grid-template-areas: 
+        "person-foto person-name-contact"
+        "info-block info-block";
+    }
+
+    .person-container__info {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .entry-page-container {
+        margin-bottom: 30px;
+    }
+
+    .person-container {
+        display: block;
+    }
+
+    .person-container__foto {
+        margin-bottom: 30px;
+    }
+
+    .card-container__publications-line {
+        margin-top: 30px;
+    }
+}

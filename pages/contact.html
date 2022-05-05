@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/team.css">
-        <title>team</title>
+        <link rel="stylesheet" href="../css/contact.css">
+        <title>contact</title>
     </head>
     <body>
         <div class="container">
@@ -15,7 +15,7 @@
                     <div class="header-container__logo">
                         <a href="../index.html">
                             <img class="header-container__logo-img" src="../images/Dark_Logo.svg" alt="hlegal">
-                            <p class="header-container__logo-text">team</p>
+                            <p class="header-container__logo-text">contact</p>
                         </a>
                     </div>
                     <div class="header-container__contacts flex-container">
@@ -40,13 +40,13 @@
                             <li class="header-container__nav-item">
                                 <a href="services.html">services</a>
                             </li>
-                            <li class="header-container__nav-item header-container__nav-item_active">
+                            <li class="header-container__nav-item">
                                 <a href="team.html">team</a>
                             </li>
                             <li class="header-container__nav-item">
                                 <a href="publications.html">publications</a>
                             </li>
-                            <li class="header-container__nav-item">
+                            <li class="header-container__nav-item  header-container__nav-item_active">
                                 <a href="contact.html">contact</a>
                             </li>
                         </ul>
@@ -54,60 +54,34 @@
                 </div>
             </header>
             <div class="fix-size-container">
-                <div class="team-page-container">
-                    <h2 class="card-container__title card-container__title-team">
-                        We are used to taking responsibility and always guarantee honest, timely assistance, 
-                        even in situations where most are powerless.
-                    </h2>
-                </div>
-                <div class="team-container">
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Alexander_Alexandrovsky.jpg" alt="">
-                        <a class="team-container__item-block" href="">   
-                            <p class="team-container__item-name card-container__team-name">Alexander Alexandrovsky</p>
-                            <p class="team-container__item-post card-container__team-post">Managing partner</p>
-                            <p class="team-container__item-link"></p>
+                <div class="entry-page-container contact-container">
+                    <div class="contact-container__info">
+                        <p class="contact-container__address footer-container__address-text">Kyiv,</br>Mechnikova str, 14/1</p>
+                        <hr class="contact-container__line">
+                        <p class="contact-container__tel">0800 211 927</p>
+                        <p class="contact-container__email">contact@forstudy.space</p>
+                        <hr class="contact-container__line">
+                        <a class="contact-container__social flex-container" href="https://uk-ua.facebook.com/" target="blank">
+                            <div class="footer-container__social-link"></div>
+                            <p class="contact-container__social-sub-text">
+                                Our page</br>on facebook
+                            </p>
                         </a>
                     </div>
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Eugene_Patrikov.jpg" alt="">
-                        <a class="team-container__item-block" href=""> 
-                            <p class="team-container__item-name card-container__team-name">Eugene Patrikov</p>
-                            <p class="team-container__item-post card-container__team-post">Equity partner, Attorney-at-law</p>
-                            <p class="team-container__item-link"></p>
-                        </a>    
-                    </div>
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Vladislav_Melnik.jpg" alt="">
-                        <a class="team-container__item-block" href=""> 
-                            <p class="team-container__item-name card-container__team-name">Vladislav Melnik</p>
-                            <p class="team-container__item-post card-container__team-post">Associate</p>
-                            <p class="team-container__item-link"></p>
-                        </a>    
-                    </div>
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Sergey_Binn.jpg" alt="">
-                        <a class="team-container__item-block" href="">
-                            <p class="team-container__item-name card-container__team-name">Sergey Binn</p>
-                            <p class="team-container__item-post card-container__team-post">Associate</p>
-                            <p class="team-container__item-link"></p>
-                        </a>     
-                    </div>
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Oksana_Kobzar.jpg" alt="">
-                        <a class="team-container__item-block" href="team_entry_page.html"> 
-                            <p class="team-container__item-name card-container__team-name">Oksana Kobzar</p>
-                            <p class="team-container__item-post card-container__team-post">Equity partner, Attorney-at-law</p>
-                            <p class="team-container__item-link"></p>
-                        </a>    
-                    </div>
-                    <div class="team-container__item">
-                        <img class="team-container__item-foto" src="../images/Julia_Wolk.jpg" alt="">
-                        <a class="team-container__item-block" href="">
-                            <p class="team-container__item-name card-container__team-name">Julia Wolk</p>
-                            <p class="team-container__item-post card-container__team-post">Associate, Attorney-at-law</p>
-                            <p class="team-container__item-link"></p>
-                        </a> 
+                    <div class="contact-container__form">
+                        <div class="contact-container__form-card popup-card">
+                            <h2 class="popup-card__title card-container__title">
+                                We would like to help you
+                            </h2>
+                            <form method="get" action="">
+                                <input class="popup__input" type="text" name="name" placeholder="Name">
+                                <textarea class="popup__textarea" name="message" placeholder="Message"></textarea>
+                                <p class="popup__text">How to answer you?</p>
+                                <input class="popup__input" type="tel" name="phone number" placeholder="Phone number">
+                                <input class="popup__input" type="email" name="email" placeholder="Email">
+                                <input class="popup-card__submit" type="submit" value="Send message">
+                            </form>
+                        </div> 
                     </div>
                 </div>
             </div>
